@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Таиланд, июнь 2027</title>
-<meta name="description" content="Семейный план поездки в Бангкок и на Пхукет на 12 дней: бюджет, маршрут, еда, тайские фразы, чек-лист.">
+<meta name="description" content="Семейный план поездки в Бангкок и на Пхукет на 12 дней: бюджет, маршрут, еда, тайские фразы, голосовой переводчик, чек-лист.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Таиланд, июнь 2027">
 <meta property="og:description" content="Бангкок + Пхукет, 12 дней: маршрут, бюджет, фразы">
 <meta property="og:image" content="https://awesome926.github.io/thailand-2027/img/phiphi.jpg">
 <meta name="theme-color" content="#0B3B3A">
 <meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -37,7 +38,8 @@
     <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
     <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.500v5h3.500L12 18.500v-13L7.500 9.500H4z"/><path d="M15.500 9a4 4 0 0 1 0 6M18 6.500a7.500 7.500 0 0 1 0 11"/></symbol>
-    <symbol id="i-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5.500A1.500 1.500 0 0 1 5.500 4H9M15 4h3.500A1.500 1.500 0 0 1 20 5.500V9M20 15v3.500a1.500 1.500 0 0 1-1.500 1.500H15M9 20H5.500A1.500 1.500 0 0 1 4 18.500V15"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.500 11a6.500 6.500 0 0 0 13 0M12 17.500V21M8.500 21h7"/></symbol>
+    <symbol id="i-show"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5.500A1.500 1.500 0 0 1 5.500 4H9M15 4h3.500A1.500 1.500 0 0 1 20 5.500V9M20 15v3.500a1.500 1.500 0 0 1-1.500 1.500H15M9 20H5.500A1.500 1.500 0 0 1 4 18.500V15"/></symbol>
     <symbol id="i-edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.500 6.500l4 4"/></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.600-5.900M20 4v4.500h-4.500"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.500 10 17.500 19 7"/></symbol>
@@ -83,6 +85,7 @@
       <a class="chip" href="#route">🗺 Маршрут</a>
       <a class="chip" href="#food">🍜 Еда</a>
       <a class="chip" href="#phrases">💬 Фразы</a>
+      <a class="chip" href="#talk">🎙 Переводчик</a>
       <a class="chip" href="#tips">🛟 Важное</a>
       <a class="chip" href="#check">✅ Чек-лист</a>
     </div>
@@ -164,10 +167,35 @@
       <button type="button" data-g="1" aria-pressed="false">Мама, сестра · ка</button>
     </div>
   </div>
+  <div class="note info rv" style="margin-top:0"><b>🙏 Что такое «кхап» и «ка»</b>
+    <p>Это вежливые частицы. Их ставят в конец почти любой фразы, как наше «пожалуйста» или «будьте добры». Отдельного перевода у них нет, но без них речь звучит грубовато. Выбирают по тому, кто говорит, а не к кому обращаются: мужчины и мальчики говорят «кхап» (<span lang="th">ครับ</span>), женщины и девочки «ка» (<span lang="th">ค่ะ</span>). Просто «кхап» или «ка» в ответ значит «да, хорошо». Переключатель «Говорю я / Мама, сестра» подставит нужную частицу в приветствие и «спасибо».</p></div>
   <div class="phrases" id="plist"></div>
   <div class="card rv" style="margin-top:14px"><b class="card-t">Числа и торг</b>
     <div class="nums" id="nums"></div>
     <p class="muted" style="margin:12px 0 0">На рынках и у тук-туков цену называют с запасом, торгуйся на 20-40%. В торговых центрах цены фиксированные.</p></div>
+</section>
+
+<section id="talk">
+  <div class="sec-head rv"><span class="eyebrow">Живой разговор</span><h2>Переводчик</h2><p>Скажи или напиши по-русски: телефон покажет фразу по-тайски и произнесёт её вслух. Потом дай собеседнику нажать жёлтую кнопку и ответить, и ты увидишь перевод на русский. Нужен интернет.</p></div>
+  <div class="card talk rv">
+    <div class="talk-log" id="tlog" role="log" aria-live="polite" aria-label="Разговор">
+      <p class="talk-empty" id="tempty">Здесь появится разговор. Попробуй: «Где здесь можно недорого поесть?»</p>
+    </div>
+    <div class="talk-live" id="tlive" hidden><i></i><i></i><i></i><span id="tliveTxt">Слушаю…</span></div>
+    <form class="talk-form" id="tform">
+      <input id="tin" type="text" maxlength="300" autocomplete="off" enterkeyhint="send" placeholder="Напиши по-русски…" aria-label="Текст для перевода">
+      <button class="btn map" aria-label="Перевести"><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+    </form>
+    <div class="talk-mics" id="tmics">
+      <button type="button" class="mic me" id="micRu"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg><span><b>Говорю я</b><small>по-русски</small></span></button>
+      <button type="button" class="mic th" id="micTh"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg><span><b lang="th">กดแล้วพูด</b><small>отвечает таец</small></span></button>
+    </div>
+    <div class="talk-opts">
+      <label class="sw"><input type="checkbox" id="autoSay" checked><i aria-hidden="true"></i>Сразу произносить перевод</label>
+      <button type="button" class="link" id="tclear" hidden>Очистить</button>
+    </div>
+    <small class="talk-note" id="tnote">Перевод машинный: говори короткими простыми фразами, так точнее. Важное (адрес, цену, аллергию) лучше ещё и показать текстом. Текст и голос для перевода уходят в сервисы Google.</small>
+  </div>
 </section>
 
 <section id="tips">

@@ -351,6 +351,60 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 .nums span{display:inline-flex;align-items:baseline;gap:7px;padding:7px 12px;border-radius:12px;background:var(--sunk);font-weight:600;font-size:14px}
 .nums span b{font:700 14px var(--f-display);color:var(--lagoon)}
 
+/* ---------- переводчик ---------- */
+.talk{display:grid;gap:14px;max-width:780px}
+.talk-log{display:flex;flex-direction:column;gap:10px;min-height:170px;max-height:min(54vh,480px);overflow-y:auto;overscroll-behavior:contain;scroll-behavior:smooth;padding:4px 2px;scrollbar-width:thin}
+.talk-empty{margin:auto;text-align:center;color:var(--muted);font-size:14px;max-width:34ch}
+.msg{max-width:88%;padding:12px 15px;border-radius:20px;display:grid;gap:4px;animation:msg-in .45s var(--spring) both}
+@keyframes msg-in{from{opacity:0;scale:.86;translate:0 12px}}
+.msg.me{align-self:flex-end;background:var(--lagoon);color:var(--bg);border-bottom-right-radius:6px;transform-origin:100% 100%}
+.msg.th{align-self:flex-start;background:var(--gold-soft);color:var(--fg);border-bottom-left-radius:6px;transform-origin:0 100%}
+.msg .src{font-size:13px;opacity:.82;overflow-wrap:anywhere}
+.msg .dst{font-weight:700;font-size:18px;line-height:1.35;overflow-wrap:anywhere}
+.msg.me .dst{font-family:var(--f-thai);font-size:23px;line-height:1.45}
+.msg.th .src{font-family:var(--f-thai);font-size:16px}
+.msg.err .dst{font:600 14px/1.4 var(--f-body)}
+.msg-acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:5px}
+.msg-acts:empty{display:none}
+.msg-acts button{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 11px;border:0;border-radius:11px;font:600 13px/1 var(--f-body);color:inherit;background:color-mix(in srgb,currentColor 15%,transparent);transition:transform .2s var(--spring),background-color .2s}
+.msg-acts button:active{transform:scale(.93)}
+.msg-acts .m-say.playing{background:color-mix(in srgb,currentColor 32%,transparent);animation:pulse 1s ease-in-out infinite}
+.dots{display:inline-flex;gap:5px;padding:6px 0}
+.dots i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:.5;animation:dot 1s ease-in-out infinite}
+.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+@keyframes dot{40%{transform:translateY(-6px);opacity:1}}
+.talk-live{display:flex;align-items:center;gap:5px;min-height:46px;padding:10px 14px;border-radius:14px;background:var(--chili-soft);color:var(--fg);font-weight:600;font-size:15px}
+.talk-live i{flex:none;width:4px;height:18px;border-radius:3px;background:var(--chili);animation:bar 0.9s ease-in-out infinite}
+.talk-live i:nth-child(2){animation-delay:.15s}.talk-live i:nth-child(3){animation-delay:.3s}
+.talk-live span{margin-left:8px;overflow-wrap:anywhere;font-family:var(--f-body),var(--f-thai)}
+@keyframes bar{50%{transform:scaleY(.35)}}
+.talk-form{display:flex;gap:8px}
+.talk-form input{flex:1;min-width:0;font:500 16px/1.3 var(--f-body);padding:12px 14px;border-radius:14px;border:1.500px solid var(--line);background:var(--sunk);color:var(--fg);transition:border-color .2s,box-shadow .2s,background-color .2s}
+.talk-form input:focus{outline:0;border-color:var(--lagoon);box-shadow:0 0 0 4px color-mix(in srgb,var(--lagoon) 18%,transparent);background:var(--surface)}
+.talk-form .btn{min-width:50px;min-height:48px;border-radius:14px}
+.talk-mics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mic{position:relative;display:flex;align-items:center;justify-content:center;gap:11px;min-height:68px;padding:10px 12px;border:0;border-radius:20px;text-align:left;transition:transform .2s var(--spring),box-shadow .25s}
+.mic.me{background:var(--lagoon);color:var(--bg);box-shadow:0 10px 22px -12px var(--lagoon)}
+.mic.th{background:var(--gold-hi);color:#0C2526;box-shadow:0 10px 22px -12px var(--gold)}
+.mic .ic{width:26px;height:26px}
+.mic span{display:grid;gap:2px;min-width:0}
+.mic b{font:700 15px/1.15 var(--f-display)}
+.mic.th b{font:700 19px/1.25 var(--f-thai)}
+.mic small{font-size:12px;opacity:.85}
+.mic:active{transform:scale(.96)}
+.mic.rec{background:var(--chili);color:#fff;animation:rec 1.200s ease-in-out infinite}
+.mic.rec .ic{animation:bob 0.8s ease-in-out infinite}
+@keyframes rec{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--chili) 55%,transparent)}50%{box-shadow:0 0 0 12px color-mix(in srgb,var(--chili) 0%,transparent)}}
+.talk-opts{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 14px;font-size:14px;font-weight:600}
+.sw{display:inline-flex;align-items:center;gap:10px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.sw input{position:absolute;opacity:0;width:1px;height:1px}
+.sw i{flex:none;position:relative;width:42px;height:25px;border-radius:99px;background:var(--line);transition:background-color .25s}
+.sw i::after{content:"";position:absolute;left:3px;top:3px;width:19px;height:19px;border-radius:50%;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .3s var(--spring)}
+.sw input:checked + i{background:var(--lagoon)}
+.sw input:checked + i::after{transform:translateX(17px)}
+.sw input:focus-visible + i{outline:3px solid var(--gold-hi);outline-offset:2px}
+.talk-note{color:var(--muted);font-size:13px;line-height:1.45}
+
 dialog{color:var(--fg)}
 dialog::backdrop{background:rgba(4,22,22,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 .show{border:0;padding:0;margin:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;background:var(--surface)}
@@ -449,7 +503,7 @@ footer p{max-width:70ch;margin:18px 0 0}
 
 /* ---------- печать ---------- */
 @media print{
-  .nav,.fab,.toasts,.scroll-cue,.waves,.btns,.glass-btn,.daystrip,.seg-ctl,.tix,.conv,.foot-row,.acts,.dish .btn,#ckReset{display:none!important}
+  #talk,.nav,.fab,.toasts,.scroll-cue,.waves,.btns,.glass-btn,.daystrip,.seg-ctl,.tix,.conv,.foot-row,.acts,.dish .btn,#ckReset{display:none!important}
   .js .rv{opacity:1!important;translate:none!important}
   .js .sec-head.rv h2{filter:none!important}
   body{background:#fff}body::before{display:none}

@@ -1,11 +1,13 @@
 /* Офлайн-режим: страница, стили, скрипт и фото лежат в кэше телефона. */
-const VERSION = "th27-v2";
+const VERSION = "th27-v3";
 const CORE = [
   "./", "index.html", "css/style.css", "js/app.js", "manifest.webmanifest",
   "img/favicon.svg", "img/icon-192.png", "img/icon-512.png", "img/apple-touch-icon.png",
   "img/phiphi.jpg", "img/grand_palace.jpg", "img/wat_arun.jpg", "img/yaowarat.jpg", "img/safari.jpg",
   "img/lumphini.jpg", "img/floating.jpg", "img/buddha.jpg", "img/chalong.jpg", "img/kata.jpg",
   "img/patong.jpg", "img/town.jpg", "img/promthep.jpg",
+  "img/airport_bkk.jpg", "img/wat_pho.jpg", "img/mbk.jpg", "img/iconsiam.jpg", "img/airport_hkt.jpg", "img/karon.jpg",
+  "img/waterpark.jpg", "img/market.jpg",
   "img/food_padthai.jpg", "img/food_tomyum.jpg", "img/food_mango.jpg"
 ];
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];

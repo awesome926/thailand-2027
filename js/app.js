@@ -248,21 +248,21 @@ rateBtn.addEventListener("click", async () => {
 
 /* ================= маршрут ================= */
 const M = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
-const DIM = { grand_palace: [960, 641], wat_arun: [760, 507], yaowarat: [760, 504], food_padthai: [760, 760], safari: [760, 570], lumphini: [760, 420], floating: [760, 507], buddha: [760, 505], chalong: [760, 587], kata: [760, 570], patong: [760, 570], town: [760, 570], promthep: [960, 640], phiphi: [960, 640] };
+const DIM = { grand_palace: [960, 641], wat_arun: [760, 507], yaowarat: [760, 504], food_padthai: [760, 760], safari: [760, 570], lumphini: [760, 420], floating: [760, 507], buddha: [760, 505], chalong: [760, 587], kata: [760, 570], patong: [760, 570], town: [760, 570], promthep: [960, 640], phiphi: [960, 640], airport_bkk: [800, 538], wat_pho: [800, 455], mbk: [800, 533], iconsiam: [800, 600], airport_hkt: [800, 533], karon: [800, 533], waterpark: [800, 600], market: [800, 533] };
 /* img: имя файла в /img, либо эмодзи-заглушка, если фото нет */
 const P = (name, desc, addr, price, q, img, alt) => ({ name, desc, addr, price, q, img, alt });
 const CITIES = [
   { id: "bkk", name: "Бангкок", sub: "Дни 1-5 · храмы, рынки, сафари", tag: "5 дней", img: "grand_palace", days: [
     { n: 1, t: "Прилёт и отдых", d: "Заселяемся и отсыпаемся после перелёта. SIM-карту (AIS или True) покупай сразу в аэропорту, около 300-600 бат за пакет на 2 недели.", p: [
-      P("Аэропорт Суварнабхуми (BKK)", "В город дешевле всего ехать на электричке Airport Rail Link до станции Phaya Thai.", "Bang Phli, Samut Prakan 10540", "≈ 45 бат с человека", "Suvarnabhumi Airport", "🛬")] },
+      P("Аэропорт Суварнабхуми (BKK)", "В город дешевле всего ехать на электричке Airport Rail Link до станции Phaya Thai.", "Bang Phli, Samut Prakan 10540", "≈ 45 бат с человека", "Suvarnabhumi Airport", "airport_bkk", "Терминал аэропорта Суварнабхуми")] },
     { n: 2, t: "Дворец и главные храмы", d: "Одевайтесь закрыто: плечи и колени. Иначе во дворец не пустят. Если на улице говорят «дворец сегодня закрыт», это развод, иди к кассе сам.", p: [
       P("Большой дворец и храм Изумрудного Будды", "Главная достопримечательность страны. Приходи к открытию, пока не жарко.", "Na Phra Lan Rd, Phra Nakhon, Bangkok 10200", "500 бат, дети до 120 см бесплатно", "Grand Palace Bangkok", "grand_palace"),
-      P("Ват Пхо, храм Лежащего Будды", "Золотой Будда длиной 46 метров, в пяти минутах пешком от дворца. Тут же знаменитая школа тайского массажа.", "2 Sanam Chai Rd, Phra Nakhon, Bangkok 10200", "300 бат", "Wat Pho Bangkok", "🛕"),
+      P("Ват Пхо, храм Лежащего Будды", "Золотой Будда длиной 46 метров, в пяти минутах пешком от дворца. Тут же знаменитая школа тайского массажа.", "2 Sanam Chai Rd, Phra Nakhon, Bangkok 10200", "300 бат", "Wat Pho Bangkok", "wat_pho", "Лежащий Будда в храме Ват Пхо"),
       P("Ват Арун, храм Рассвета", "Переплыви реку на маленьком пароме от пирса Tha Tien. Самый красивый вид на закате.", "158 Wang Doem Rd, Bangkok Yai, Bangkok 10600", "100 бат + паром ≈ 5 бат", "Wat Arun Bangkok", "wat_arun")] },
     { n: 3, t: "Чайна-таун и шопинг", d: "Днём торговые центры с кондиционером, вечером улица еды.", p: [
       P("Яоварат, Чайна-таун", "Вечером это главная уличная еда Бангкока: креветки, фрукты, десерты. Бери то, что видишь на тарелках у местных.", "Yaowarat Rd, Samphanthawong, Bangkok 10100", "еда от 40-100 бат", "Yaowarat Road Bangkok", "yaowarat"),
-      P("MBK Center", "Огромный ТЦ с дешёвыми футболками, сувенирами и электроникой. Торгуйся.", "444 Phayathai Rd, Pathum Wan, Bangkok 10330", "вход бесплатный", "MBK Center Bangkok", "🛍️"),
-      P("ICONSIAM и фудкорт SookSiam", "Огромный ТЦ на реке. Внизу фудкорт SookSiam с едой со всей страны. До него ходит бесплатный катер от пирса Sathorn.", "299 Charoen Nakhon Rd, Khlong San, Bangkok 10600", "еда от 60-120 бат", "ICONSIAM Bangkok", "🚤"),
+      P("MBK Center", "Огромный ТЦ с дешёвыми футболками, сувенирами и электроникой. Торгуйся.", "444 Phayathai Rd, Pathum Wan, Bangkok 10330", "вход бесплатный", "MBK Center Bangkok", "mbk"),
+      P("ICONSIAM и фудкорт SookSiam", "Огромный ТЦ на реке. Внизу фудкорт SookSiam с едой со всей страны. До него ходит бесплатный катер от пирса Sathorn.", "299 Charoen Nakhon Rd, Khlong San, Bangkok 10600", "еда от 60-120 бат", "ICONSIAM Bangkok", "iconsiam", "ICONSIAM, вид с реки"),
       P("Thip Samai, Пад Тай", "Знаменитая лавка Пад Тая, вечером очередь. Скажи «май пхет».", "313 Maha Chai Rd, Phra Nakhon, Bangkok 10200", "≈ 100-200 бат", "Thip Samai Pad Thai Bangkok", "food_padthai", "Тарелка Пад Тая")] },
     { n: 4, t: "Сафари и парк", d: "Лучший день для сестры. Выезжай утром, парк большой.", p: [
       P("Safari World", "Сафари на машине или автобусе среди жирафов и тигров, плюс шоу дельфинов и морских львов.", "99 Panya Intra Rd, Khlong Sam Wa, Bangkok 10510", "≈ 1 000-1 300 бат с человека, проверь на сайте", "Safari World Bangkok", "safari"),
@@ -272,22 +272,22 @@ const CITIES = [
   ] },
   { id: "hkt", name: "Пхукет", sub: "Дни 6-12 · пляжи, острова, закаты", tag: "7 дней", img: "buddha", days: [
     { n: 6, t: "Перелёт на Пхукет", d: "Жильё бери на Кате или Кароне: там тише и спокойнее, чем в Патонге, и лучше для семьи.", p: [
-      P("Аэропорт Пхукета (HKT)", "Такси в аэропорту дорогое. Дешевле автобус, минивэн или Grab/Bolt.", "222 Moo 6, Mai Khao, Thalang, Phuket 83110", "автобус ≈ 100-200 бат, такси от 800", "Phuket International Airport", "🛬")] },
+      P("Аэропорт Пхукета (HKT)", "Такси в аэропорту дорогое. Дешевле автобус, минивэн или Grab/Bolt.", "222 Moo 6, Mai Khao, Thalang, Phuket 83110", "автобус ≈ 100-200 бат, такси от 800", "Phuket International Airport", "airport_hkt", "Самолёт AirAsia в аэропорту Пхукета")] },
     { n: 7, t: "Пляжный день", d: "Сначала смотри на флаг у спасателей. Красный: в воду не заходим.", p: [
       P("Пляж Ката", "Самый семейный пляж с пологим заходом. Массаж прямо на берегу, для мамы.", "Kata, Mueang Phuket 83100", "бесплатно · массаж ≈ 300-400 бат/час", "Kata Beach Phuket", "kata"),
-      P("Пляж Карон", "Длиннее и спокойнее Каты, рядом ночной рынок.", "Karon, Mueang Phuket 83100", "бесплатно", "Karon Beach Phuket", "🏖️")] },
+      P("Пляж Карон", "Длиннее и спокойнее Каты, рядом ночной рынок.", "Karon, Mueang Phuket 83100", "бесплатно", "Karon Beach Phuket", "karon", "Закат на пляже Карон")] },
     { n: 8, t: "Храмы и закат", d: "Скромная одежда в храмах. На мыс приезжай за час до заката.", p: [
       P("Большой Будда", "Белая статуя высотой 45 метров на холме, вид на половину острова.", "Nakkerd Hills, Chalong, Mueang Phuket 83130", "бесплатно, пожертвование по желанию", "Big Buddha Phuket", "buddha"),
       P("Ват Чалонг", "Самый известный и самый красивый храм Пхукета.", "70 Chaofa Rd, Chalong, Mueang Phuket 83130", "бесплатно", "Wat Chalong Phuket", "chalong"),
       P("Мыс Промтхеп", "Лучшее место для заката на всём острове.", "Rawai, Mueang Phuket 83130", "бесплатно", "Promthep Cape Phuket", "promthep")] },
     { n: 9, t: "Старый город и аквапарк", d: "Если сегодня воскресенье, вечером на Thalang Road проходит большой ночной рынок, с 16:00 до 22:00.", p: [
       P("Старый город Пхукета", "Цветные дома в китайско-португальском стиле, кафе, лавки, стрит-арт.", "Thalang Rd, Talat Yai, Mueang Phuket 83000", "бесплатно", "Thalang Road Old Phuket Town", "town"),
-      P("Аквапарк Splash Jungle", "Горки подходят и в 14, и в 6 лет. Цену и часы на 2027 проверь на сайте.", "Mai Khao, Thalang, Phuket 83110", "≈ 1 000-1 500 бат с человека", "Splash Jungle Water Park Phuket", "💦")] },
+      P("Аквапарк Splash Jungle", "Горки подходят и в 14, и в 6 лет. Цену и часы на 2027 проверь на сайте.", "Mai Khao, Thalang, Phuket 83110", "≈ 1 000-1 500 бат с человека", "Splash Jungle Water Park Phuket", "waterpark", "Водные горки в тайском аквапарке (фото для примера, не Splash Jungle)")] },
     { n: 10, t: "Острова Пхи-Пхи", d: "Самый дорогой и самый красивый день. В июне бывают волны и отмены рейсов. Бери большой паром, а не маленький спидбот, особенно с шестилеткой.", p: [
       P("Острова Пхи-Пхи и бухта Мая", "Паром отходит от причала Rassada. Если штормит, замени на пляж и не рискуй.", "Rassada Pier, Rassada, Mueang Phuket 83000", "паром ≈ 600-700 бат туда-обратно с человека", "Rassada Pier Phuket", "phiphi")] },
     { n: 11, t: "Шопинг, массаж, рынок", d: "Спокойный день перед вылетом. Массаж выбирай по отзывам в Google Maps.", p: [
       P("Jungceylon, Патонг", "Большой ТЦ: кафе, кино, детский уголок, сувениры.", "181 Rat-U-Thit 200 Pi Rd, Patong, Kathu 83150", "вход бесплатный", "Jungceylon Patong", "patong", "Пляж Патонг"),
-      P("Рынок Banzaan", "Рядом с Jungceylon: свежие морепродукты и дешёвые фрукты, наверху готовят.", "Rat-U-Thit 200 Pi Rd, Patong, Kathu 83150", "еда от 60-150 бат", "Banzaan Fresh Market Patong", "🦐")] },
+      P("Рынок Banzaan", "Рядом с Jungceylon: свежие морепродукты и дешёвые фрукты, наверху готовят.", "Rat-U-Thit 200 Pi Rd, Patong, Kathu 83150", "еда от 60-150 бат", "Banzaan Fresh Market Patong", "market", "Крытый рынок в Патонге")] },
     { n: 12, t: "Вылет домой", d: "Заранее реши, как ехать в аэропорт: автобус, Grab или Bolt. Домой можно лететь через Бангкок или прямо с Пхукета, смотри, какие билеты дешевле.", p: [] }
   ] }
 ];
@@ -421,21 +421,170 @@ $("#showSay").addEventListener("click", e => speak(showCur, e.currentTarget));
 const synth = "speechSynthesis" in window ? window.speechSynthesis : null;
 let voices = [];
 if (synth) { const load = () => { voices = synth.getVoices(); }; load(); synth.addEventListener?.("voiceschanged", load); }
-let speakBtn = null;
-function stopSpeak() { if (synth) synth.cancel(); speakBtn?.classList.remove("playing"); speakBtn = null; }
-function speak(text, btn) {
-  if (!synth || typeof SpeechSynthesisUtterance === "undefined") { toast("На этом устройстве нет озвучки. Жми «Показать»"); return; }
-  const wasSame = speakBtn === btn && synth.speaking;
+/* Озвучка. Если в телефоне есть нужный голос, говорит он (работает и без сети).
+   Если голоса нет (например, тайского на компьютере), звук берётся из сети у Google. */
+const TTS_URL = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=";
+const audio = new Audio();
+audio.preload = "auto";
+let speakBtn = null, speakSeq = 0;
+function stopSpeak() {
+  speakSeq++;
+  if (synth) synth.cancel();
+  audio.onended = audio.onerror = null; audio.pause();
+  speakBtn?.classList.remove("playing"); speakBtn = null;
+}
+/* сетевой голос принимает короткие куски, длинный текст режем по пробелам */
+function chunks(text, max = 180) {
+  const out = []; let rest = text;
+  while (rest.length > max) { let cut = rest.lastIndexOf(" ", max); if (cut < max * 0.4) cut = max; out.push(rest.slice(0, cut)); rest = rest.slice(cut).trim(); }
+  if (rest) out.push(rest);
+  return out;
+}
+function speak(text, btn, lang = "th-TH") {
+  const wasSame = !!btn && speakBtn === btn;
   stopSpeak();
-  if (wasSame) return;
-  const th = voices.find(v => /^th([-_]|$)/i.test(v.lang));
-  if (!th && voices.length) { toast("Нет тайского голоса на этом устройстве. Жми «Показать»"); return; }
-  const u = new SpeechSynthesisUtterance(text.replace(/\s*\/\s*/g, ", "));
-  u.lang = "th-TH"; u.rate = 0.8;
-  if (th) u.voice = th;
-  speakBtn = btn; btn?.classList.add("playing");
-  u.onend = u.onerror = () => { if (speakBtn === btn) { btn?.classList.remove("playing"); speakBtn = null; } };
-  synth.speak(u);
+  if (wasSame) return;                                        /* повторный тап по той же кнопке = стоп */
+  text = String(text || "").replace(/\s*\/\s*/g, ", ").trim();
+  if (!text) return;
+  const seq = speakSeq, code = lang.slice(0, 2);
+  const done = () => { if (seq === speakSeq) { btn?.classList.remove("playing"); speakBtn = null; } };
+  speakBtn = btn || null; btn?.classList.add("playing");
+  const voice = voices.find(v => v.lang.toLowerCase().startsWith(code));
+  if (synth && voice && typeof SpeechSynthesisUtterance !== "undefined") {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang; u.voice = voice; u.rate = code === "th" ? 0.85 : 1;
+    u.onend = u.onerror = done;
+    synth.speak(u);
+    return;
+  }
+  if (navigator.onLine === false) { done(); toast("На этом устройстве нет такого голоса, а без интернета его не скачать"); return; }
+  const parts = chunks(text); let i = 0;
+  const fail = () => { if (seq !== speakSeq) return; done(); toast("Не получилось озвучить. Покажи фразу текстом"); };
+  const next = () => {
+    if (seq !== speakSeq) return;
+    if (i >= parts.length) { done(); return; }
+    audio.src = TTS_URL + code + "&q=" + encodeURIComponent(parts[i++]);
+    audio.play().catch(fail);
+  };
+  audio.onended = next; audio.onerror = fail;
+  next();
+}
+
+/* ================= переводчик ================= */
+const THAI = /[ก-๛]/;
+const timeout = ms => (typeof AbortSignal !== "undefined" && AbortSignal.timeout ? AbortSignal.timeout(ms) : undefined);
+/* основной движок Google Переводчик, запасной MyMemory: оба работают прямо из браузера без ключей */
+async function translate(text, from, to) {
+  try {
+    const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURIComponent(text)}`, { signal: timeout(9000) });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const out = ((await r.json())?.[0] || []).map(s => s?.[0] || "").join("").trim();
+    if (!out) throw new Error("empty");
+    return out;
+  } catch {
+    const r = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${from}|${to}`, { signal: timeout(9000) });
+    const j = await r.json(), out = j?.responseData?.translatedText;
+    if (!r.ok || +j?.responseStatus !== 200 || !out) throw new Error("no translation");
+    return String(out).trim();
+  }
+}
+
+const tlog = $("#tlog"), tin = $("#tin"), tlive = $("#tlive"), tliveTxt = $("#tliveTxt"), autoSay = $("#autoSay"), tclear = $("#tclear");
+const T_EMPTY = tlog.innerHTML;
+autoSay.checked = store.get("autoSay", true) !== false;
+autoSay.addEventListener("change", () => store.set("autoSay", autoSay.checked));
+const toEnd = () => { tlog.scrollTop = tlog.scrollHeight; };
+
+/* who: "me" — я говорю по-русски, перевод на тайский; "th" — говорит таец, перевод на русский */
+async function say(text, who) {
+  text = String(text || "").trim().slice(0, 300);
+  if (!text) return;
+  $("#tempty")?.remove();
+  const el = document.createElement("div");
+  el.className = `msg ${who} pending`;
+  el.innerHTML = `<div class="src"${who === "th" ? ' lang="th"' : ""}></div><div class="dst"${who === "me" ? ' lang="th"' : ""}><span class="dots"><i></i><i></i><i></i></span></div><div class="msg-acts"></div>`;
+  $(".src", el).textContent = text;
+  el.dataset.src = text;
+  tlog.append(el); tclear.hidden = false; toEnd();
+  try {
+    const out = await translate(text, who === "me" ? "ru" : "th", who === "me" ? "th" : "ru");
+    el.dataset.dst = out;
+    $(".dst", el).textContent = out;
+    $(".msg-acts", el).innerHTML = `<button type="button" class="m-say" aria-label="Произнести перевод">${ic("sound")}</button>` + (who === "me" ? `<button type="button" class="m-show">${ic("show")}Показать крупно</button>` : "");
+    if (autoSay.checked) speak(out, $(".m-say", el), who === "me" ? "th-TH" : "ru-RU");
+  } catch {
+    el.classList.add("err");
+    $(".dst", el).textContent = navigator.onLine === false ? "Нет интернета. Переводчик работает только онлайн." : "Не получилось перевести.";
+    $(".msg-acts", el).innerHTML = `<button type="button" class="m-retry">${ic("refresh")}Ещё раз</button>`;
+  }
+  el.classList.remove("pending"); toEnd();
+}
+tlog.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const el = b.closest(".msg"), me = el.classList.contains("me");
+  if (b.classList.contains("m-say")) speak(el.dataset.dst, b, me ? "th-TH" : "ru-RU");
+  else if (b.classList.contains("m-show")) openShow(el.dataset.dst, el.dataset.src, b);
+  else if (b.classList.contains("m-retry")) { const t = el.dataset.src; el.remove(); say(t, me ? "me" : "th"); }
+});
+$("#tform").addEventListener("submit", e => {
+  e.preventDefault();
+  const t = tin.value; tin.value = "";
+  say(t, THAI.test(t) ? "th" : "me");                        /* тайские буквы в поле = переводим на русский */
+});
+tclear.addEventListener("click", () => { stopSpeak(); tlog.innerHTML = T_EMPTY; tclear.hidden = true; });
+
+/* микрофон: распознавание речи есть в Chrome (Android, ПК) и Safari (iPhone) */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null, recBtn = null;
+function listen(who, btn) {
+  if (rec) {
+    const same = recBtn === btn;
+    if (same) { rec.stop(); return; }                         /* повторный тап = «я договорил» */
+    rec.dropped = true; rec.abort();
+  }
+  stopSpeak();
+  const r = new SR();
+  r.lang = who === "me" ? "ru-RU" : "th-TH";
+  r.interimResults = true; r.maxAlternatives = 1; r.continuous = false;
+  let finalTxt = "", interim = "", failed = false;
+  rec = r; recBtn = btn;
+  btn.classList.add("rec"); btn.setAttribute("aria-pressed", "true");
+  tlive.hidden = false;
+  tliveTxt.textContent = who === "me" ? "Слушаю… говори по-русски" : "กำลังฟัง… พูดได้เลย";
+  r.onresult = e => {
+    interim = "";
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript;
+      if (e.results[i].isFinal) finalTxt += t; else interim += t;
+    }
+    tliveTxt.textContent = finalTxt + interim;
+  };
+  r.onerror = e => {
+    failed = true;
+    if (e.error === "aborted") return;
+    toast({
+      "not-allowed": "Разреши сайту доступ к микрофону в настройках браузера",
+      "service-not-allowed": "Разреши сайту доступ к микрофону в настройках браузера",
+      "no-speech": "Ничего не услышал. Нажми и скажи ещё раз",
+      "audio-capture": "Микрофон не найден",
+      "network": "Для распознавания речи нужен интернет",
+      "language-not-supported": `Этот браузер не распознаёт ${who === "me" ? "русский" : "тайский"} язык`
+    }[e.error] || "Не получилось распознать речь");
+  };
+  r.onend = () => {
+    btn.classList.remove("rec"); btn.setAttribute("aria-pressed", "false");
+    if (rec === r) { rec = null; recBtn = null; tlive.hidden = true; }
+    const t = (finalTxt || interim).trim();
+    if (t && !failed && !r.dropped) say(t, who);
+  };
+  try { r.start(); } catch { failed = true; r.onend(); toast("Микрофон занят, попробуй ещё раз"); }
+}
+if (SR) {
+  $("#micRu").addEventListener("click", e => listen("me", e.currentTarget));
+  $("#micTh").addEventListener("click", e => listen("th", e.currentTarget));
+} else {
+  $("#tmics").hidden = true;
+  $("#tnote").textContent = "Микрофон в этом браузере не поддерживается: открой сайт в Chrome на Android или в Safari на iPhone. Текстом переводчик работает везде. " + $("#tnote").textContent;
 }
 
 /* ================= еда ================= */
